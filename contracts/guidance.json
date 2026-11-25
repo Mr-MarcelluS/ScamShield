@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "version": "draft-2026-11-25",
+  "reviewedAt": "2026-11-25",
+  "status": "draft-requires-team-review-and-live-route-check",
+  "actions": [
+    {
+      "id": "financial_loss",
+      "trigger": "paid_yes",
+      "priority": 0,
+      "title": "Contact your bank and report promptly",
+      "steps": [
+        "Use independently verified bank channels for urgent help.",
+        "For financial cyber fraud, call 1930 or use the National Cyber Crime Reporting Portal.",
+        "Do not wait to finish collecting evidence before seeking help. Recovery is not guaranteed."
+      ],
+      "destinations": [
+        "tel:1930",
+        "https://cybercrime.gov.in/"
+      ],
+      "sources": [
+        "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57244"
+      ]
+    },
+    {
+      "id": "account_exposure",
+      "trigger": "secret_yes",
+      "priority": 1,
+      "title": "Protect the affected account",
+      "steps": [
+        "Do not share more secrets. Contact the account provider through its official app or website.",
+        "Use a trusted device for account recovery if the current device may be affected.",
+        "If money was lost, follow the financial-fraud actions immediately."
+      ],
+      "destinations": [],
+      "sources": [
+        "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57244"
+      ],
+      "editorialNote": "Trusted-device recovery is an engineering safety recommendation, not a quoted official procedure."
+    },
+    {
+      "id": "device_exposure",
+      "trigger": "installed_yes",
+      "priority": 1,
+      "title": "Avoid sensitive activity on the affected device",
+      "steps": [
+        "Stop using the affected device for banking or account recovery until you obtain trusted help.",
+        "Use another trusted device to contact your bank or account provider.",
+        "ScamShield cannot determine whether an app is malicious or certify this device is clean."
+      ],
+      "destinations": [],
+      "sources": [
+        "https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2024-0050&pageid=PUBVLNOTES02"
+      ],
+      "editorialNote": "Conservative product guidance; no automated uninstall, reset or malware diagnosis."
+    },
+    {
+      "id": "verify_independently",
+      "trigger": "always",
+      "priority": 3,
+      "title": "Verify through a separate official channel",
+      "steps": [
+        "Do not use the contact details or links in the suspicious message to verify it.",
+        "For a bank request, open the official bank app or find its official contact details independently."
+      ],
+      "destinations": [],
+      "sources": [
+        "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57244"
+      ]
+    },
+    {
+      "id": "suspected_communication",
+      "trigger": "paid_not_yes",
+      "priority": 4,
+      "title": "Consider official communication reporting",
+      "steps": [
+        "Use Sanchar Saathi/Chakshu for suspected communications and follow its current category instructions.",
+        "For financial loss or cybercrime use the appropriate cybercrime pathway instead."
+      ],
+      "destinations": [
+        "https://sancharsaathi.gov.in/"
+      ],
+      "sources": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2240592&lang=2&reg=48"
+      ]
+    },
+    {
+      "id": "clarify_exposure",
+      "trigger": "any_unknown",
+      "priority": 2,
+      "title": "Check what happened",
+      "steps": [
+        "If you are unsure, check whether you shared secrets, installed software or sent money.",
+        "You can use urgent help without waiting for an analysis result."
+      ],
+      "destinations": [],
+      "sources": [],
+      "editorialNote": "Product question, not an official reporting procedure."
+    },
+    {
+      "id": "other_cybercrime",
+      "trigger": "always",
+      "priority": 4,
+      "title": "Find official cybercrime reporting",
+      "steps": [
+        "For cybercrime concerns beyond suspected communication, use the National Cyber Crime Reporting Portal.",
+        "Follow the current official category instructions. This app does not submit a complaint for you."
+      ],
+      "destinations": [
+        "https://cybercrime.gov.in/"
+      ],
+      "sources": [
+        "https://cybercrime.gov.in/webform/FAQ.aspx"
+      ],
+      "editorialNote": "Portal purpose supported by official sources; current live form must be verified in #2."
+    }
+  ]
+}

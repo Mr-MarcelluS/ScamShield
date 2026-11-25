@@ -1,0 +1,1055 @@
+[
+  {
+    "number": 1,
+    "title": "S0.1 \u2014 Finalize ScamShield MVP scope",
+    "body": "## Summary\nDefine the MVP scope and its change control around the Share \u2192 Understand \u2192 Preserve \u2192 Respond workflow.\n\n## Acceptance criteria\n- [ ] MUST/SHOULD/COULD/DO NOT BUILD YET are defined\n- [ ] core workflow and non-goals are documented\n- [ ] a scope-change rule prevents uncontrolled expansion.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 1
+  },
+  {
+    "number": 2,
+    "title": "S0.2 \u2014 Research official cyber-fraud reporting pathways",
+    "body": "## Summary\nResearch NCRP, 1930, Sanchar Saathi, and Chakshu for correct in-app response guidance.\n\n## Acceptance criteria\n- [ ] Each service purpose and user workflow is documented\n- [ ] official URLs/procedures are cited\n- [ ] guidance does not invent official procedures.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "research",
+      "priority-high"
+    ],
+    "milestone": 1
+  },
+  {
+    "number": 3,
+    "title": "S0.3 \u2014 Define ScamShield user journey",
+    "body": "## Summary\nMap the end-to-end user experience from sharing or pasting a message through analysis, understanding, evidence preservation, and response.\n\n## Acceptance criteria\n- [ ] Share/paste, analyze, result/explanation, evidence, incident, and response flows are mapped\n- [ ] loading, error, uncertainty, and high-risk states are included.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "ui-ux",
+      "feature",
+      "research",
+      "priority-high"
+    ],
+    "milestone": 1
+  },
+  {
+    "number": 4,
+    "title": "S0.4 \u2014 Define ScamShield system architecture",
+    "body": "## Summary\nDocument Android ViewModel/domain/use-case/repository layers, Room/Retrofit, FastAPI services, PostgreSQL, and optional AI boundaries.\n\n## Acceptance criteria\n- [ ] Architecture diagram/document is created\n- [ ] Android/backend responsibilities, offline boundary, evidence storage boundary, and optional AI boundary are explicit.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "android",
+      "backend",
+      "research",
+      "priority-high"
+    ],
+    "milestone": 1
+  },
+  {
+    "number": 5,
+    "title": "S0.5 \u2014 Design ScamShield database schema",
+    "body": "## Summary\nDesign schema for User, Incident, Communication, Evidence, SuspiciousURL, RiskAssessment, RiskIndicator, TimelineEvent, and GuidanceAction.\n\n## Acceptance criteria\n- [ ] Relationships, ownership fields, and indexes are documented\n- [ ] authorization implications include IDOR/BOLA prevention.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "database",
+      "priority-high"
+    ],
+    "milestone": 1
+  },
+  {
+    "number": 6,
+    "title": "S0.6 \u2014 Define ScamShield REST API contract",
+    "body": "## Summary\nSpecify versioning, schemas, validation, errors, authentication, initial text analysis, incident, and evidence APIs.\n\n## Acceptance criteria\n- [ ] Request/response and error formats are documented\n- [ ] auth expectations and initial endpoint contracts are specified.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "documentation",
+      "backend",
+      "priority-high"
+    ],
+    "milestone": 1
+  },
+  {
+    "number": 7,
+    "title": "S0.7 \u2014 Design deterministic risk engine",
+    "body": "## Summary\nDefine explainable indicators for urgency, OTP/credential/payment/KYC requests, account threats, impersonation, suspicious URLs, and APK requests.\n\n## Acceptance criteria\n- [ ] Indicator schema, weights, risk bands, explanations, and uncertainty handling are specified\n- [ ] no infallible/binary scam claim is made.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 1
+  },
+  {
+    "number": 8,
+    "title": "S0.8 \u2014 Create ScamShield threat model",
+    "body": "## Summary\nThreat model unauthorized access, evidence theft, broken authentication, IDOR/BOLA, SQL injection, malicious uploads, token theft, API abuse, excess collection, insecure logs, and exposed secrets.\n\n## Acceptance criteria\n- [ ] Assets, trust boundaries, and attack surfaces are identified\n- [ ] mitigations are documented.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 1
+  },
+  {
+    "number": 9,
+    "title": "S1.1 \u2014 Initialize Android project architecture",
+    "body": "## Summary\nSet up the Android application foundation and its agreed architecture.\n\n## Acceptance criteria\n- [ ] Project builds with the baseline app structure\n- [ ] package/module responsibilities are documented\n- [ ] no secrets are committed.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 2
+  },
+  {
+    "number": 10,
+    "title": "S1.2 \u2014 Implement Compose navigation and MVVM foundation",
+    "body": "## Summary\nEstablish Compose navigation and MVVM patterns for the core ScamShield screens.\n\n## Acceptance criteria\n- [ ] Navigation routes and ViewModel state/events are in place\n- [ ] loading/error states have a consistent pattern.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "ui-ux",
+      "priority-medium"
+    ],
+    "milestone": 2
+  },
+  {
+    "number": 11,
+    "title": "S1.3 \u2014 Initialize FastAPI backend",
+    "body": "## Summary\nCreate the backend service foundation and initial health endpoint.\n\n## Acceptance criteria\n- [ ] FastAPI app starts locally\n- [ ] routes/configuration are structured\n- [ ] health endpoint and setup instructions work.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 2
+  },
+  {
+    "number": 12,
+    "title": "S1.4 \u2014 Configure PostgreSQL SQLAlchemy and Alembic",
+    "body": "## Summary\nWire PostgreSQL, SQLAlchemy, and Alembic into the backend foundation.\n\n## Acceptance criteria\n- [ ] Database connection is environment-configured\n- [ ] migrations can be generated/applied\n- [ ] credentials are not committed.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "database",
+      "priority-high"
+    ],
+    "milestone": 2
+  },
+  {
+    "number": 13,
+    "title": "S1.5 \u2014 Implement authentication foundation",
+    "body": "## Summary\nImplement account authentication using secure password hashing and short-lived access tokens with an appropriate refresh strategy.\n\n## Acceptance criteria\n- [ ] Password hashes use an appropriate secure algorithm\n- [ ] token expiry/refresh behavior is defined and tested\n- [ ] secrets are environment-managed.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "priority-high"
+    ],
+    "milestone": 2
+  },
+  {
+    "number": 14,
+    "title": "S1.6 \u2014 Implement risk indicator/risk band data structures",
+    "body": "## Summary\nDefine serializable domain/storage structures for indicators and risk bands.\n\n## Acceptance criteria\n- [ ] Indicator and band schemas represent evidence, severity, explanation, and uncertainty\n- [ ] invalid values are rejected.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "database",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 2
+  },
+  {
+    "number": 15,
+    "title": "S1.7 \u2014 Establish automated testing foundation",
+    "body": "## Summary\nSet up test structure and initial security-test conventions for Android/backend/risk components.\n\n## Acceptance criteria\n- [ ] Tests can run using documented commands\n- [ ] fixtures avoid real sensitive data\n- [ ] security-focused test categories are established.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "testing",
+      "priority-medium"
+    ],
+    "milestone": 2
+  },
+  {
+    "number": 16,
+    "title": "S2.1 \u2014 Build Android text analysis screen",
+    "body": "## Summary\nBuild the message/text entry screen for the first analysis flow.\n\n## Acceptance criteria\n- [ ] Users can enter/paste text and submit it\n- [ ] empty/oversized input is handled clearly\n- [ ] submission state is accessible.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "ui-ux",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 3
+  },
+  {
+    "number": 17,
+    "title": "S2.2 \u2014 Integrate Retrofit with analysis API",
+    "body": "## Summary\nConnect Android to the versioned text-analysis API using Retrofit.\n\n## Acceptance criteria\n- [ ] Typed request/response models and repository call are implemented\n- [ ] network failures and API errors are surfaced safely.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "backend",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 3
+  },
+  {
+    "number": 18,
+    "title": "S2.3 \u2014 Implement POST /api/v1/analysis/text",
+    "body": "## Summary\nImplement the first text-analysis endpoint and structured result response.\n\n## Acceptance criteria\n- [ ] Endpoint accepts validated text and returns structured risk output with indicators and explanations\n- [ ] response is versioned.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 3
+  },
+  {
+    "number": 19,
+    "title": "S2.4 \u2014 Implement analysis request validation and response schema",
+    "body": "## Summary\nDefine and enforce request limits, schema validation, and stable analysis response format.\n\n## Acceptance criteria\n- [ ] Malformed/oversized requests receive consistent errors\n- [ ] response fields conform to documented schema\n- [ ] validation tests cover boundaries.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 3
+  },
+  {
+    "number": 20,
+    "title": "S2.5 \u2014 Implement initial scam indicators",
+    "body": "## Summary\nImplement the initial deterministic indicators for urgency, OTP/credential/payment/KYC requests, account threats, impersonation, URL, and APK requests.\n\n## Acceptance criteria\n- [ ] Indicators are rule-based and explainable\n- [ ] examples cover positive and negative matches\n- [ ] output represents uncertainty.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 3
+  },
+  {
+    "number": 21,
+    "title": "S2.6 \u2014 Integrate end-to-end text analysis vertical slice",
+    "body": "## Summary\nConnect text entry through Android, FastAPI, deterministic risk engine, structured result, and Android explanation UI.\n\n## Acceptance criteria\n- [ ] A text sample completes the full flow\n- [ ] structured explanations render on device\n- [ ] errors and uncertain outcomes remain understandable.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "haneeshraj14-design",
+      "siriramya28"
+    ],
+    "labels": [
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 3
+  },
+  {
+    "number": 22,
+    "title": "S2.7 \u2014 Implement analysis loading error and uncertainty states",
+    "body": "## Summary\nComplete UI states for pending, failed, uncertain, and high-risk analysis outcomes.\n\n## Acceptance criteria\n- [ ] Each state is distinguishable and accessible\n- [ ] uncertainty avoids definitive scam claims\n- [ ] retry/recovery is available where appropriate.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "ui-ux",
+      "feature",
+      "priority-medium"
+    ],
+    "milestone": 3
+  },
+  {
+    "number": 23,
+    "title": "S3.1 \u2014 Implement suspicious entity extraction",
+    "body": "## Summary\nExtract URLs, phone numbers, organizations, requested actions, amounts, deadlines, and credential requests from analyzed text.\n\n## Acceptance criteria\n- [ ] Supported entities are returned with source context\n- [ ] absent/ambiguous entities are represented safely\n- [ ] synthetic cases are tested.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "feature",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 4
+  },
+  {
+    "number": 24,
+    "title": "S3.2 \u2014 Implement URL detection and normalization",
+    "body": "## Summary\nDetect and normalize URLs in messages without fetching or opening them.\n\n## Acceptance criteria\n- [ ] URLs are consistently parsed and normalized\n- [ ] malformed inputs are handled safely\n- [ ] extracted URLs can be passed to analysis.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 4
+  },
+  {
+    "number": 25,
+    "title": "S3.3 \u2014 Implement structural URL risk analysis",
+    "body": "## Summary\nAnalyze URL structure including HTTP/HTTPS, shorteners, suspicious subdomains, misleading brands, suspicious TLDs, and anomalies.\n\n## Acceptance criteria\n- [ ] Structural signals are explainable and do not depend on external reputation APIs\n- [ ] malformed and benign URLs are covered.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 4
+  },
+  {
+    "number": 26,
+    "title": "S3.4 \u2014 Implement basic typosquatting detection",
+    "body": "## Summary\nDetect basic lookalike-domain patterns using deterministic comparisons.\n\n## Acceptance criteria\n- [ ] Known synthetic lookalikes produce explainable signals\n- [ ] legitimate similar domains and false positives are considered.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "priority-medium",
+      "risk-engine"
+    ],
+    "milestone": 4
+  },
+  {
+    "number": 27,
+    "title": "S3.5 \u2014 Expand explainable risk scoring",
+    "body": "## Summary\nCombine deterministic indicators into risk scores/bands while retaining per-indicator explanations and uncertainty.\n\n## Acceptance criteria\n- [ ] Scoring and band thresholds are documented\n- [ ] each score is traceable to indicators\n- [ ] no guaranteed-scam assertion is emitted.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 4
+  },
+  {
+    "number": 28,
+    "title": "S3.6 \u2014 Build synthetic risk-engine evaluation dataset",
+    "body": "## Summary\nCreate safe synthetic scam-like, legitimate, and ambiguous samples for evaluation.\n\n## Acceptance criteria\n- [ ] Dataset contains no real personal data\n- [ ] cases are labeled and reproducible\n- [ ] coverage and limitations are documented.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "testing",
+      "research",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 4
+  },
+  {
+    "number": 29,
+    "title": "S3.7 \u2014 Build automated risk-engine test suite",
+    "body": "## Summary\nTest suspicious, legitimate, ambiguous, false-positive, and false-negative risk-engine cases.\n\n## Acceptance criteria\n- [ ] Automated cases assert indicators, explanations, and bands\n- [ ] regression suite runs repeatably\n- [ ] all data is synthetic.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "testing",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 4
+  },
+  {
+    "number": 30,
+    "title": "S4.1 \u2014 Implement Android screenshot/image picker",
+    "body": "## Summary\nAllow users to select a screenshot for local review and OCR.\n\n## Acceptance criteria\n- [ ] Image picker supports expected formats\n- [ ] cancellation and permission errors are handled\n- [ ] selection does not upload the image by default.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 5
+  },
+  {
+    "number": 31,
+    "title": "S4.2 \u2014 Implement screenshot preview and review",
+    "body": "## Summary\nShow selected screenshot and let users review before OCR/analysis.\n\n## Acceptance criteria\n- [ ] Preview is legible and cancellable\n- [ ] users can replace or remove the image\n- [ ] no unintended upload occurs.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "ui-ux",
+      "feature",
+      "priority-medium"
+    ],
+    "milestone": 5
+  },
+  {
+    "number": 32,
+    "title": "S4.3 \u2014 Integrate on-device ML Kit OCR",
+    "body": "## Summary\nRun ML Kit OCR on-device and pass extracted text into the common analysis experience.\n\n## Acceptance criteria\n- [ ] OCR executes on-device\n- [ ] extracted text can be reviewed\n- [ ] image bytes are not sent as part of OCR processing.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "ocr",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 5
+  },
+  {
+    "number": 33,
+    "title": "S4.4 \u2014 Handle OCR failure and empty-text cases",
+    "body": "## Summary\nHandle OCR errors, unreadable images, and successful scans with no text.\n\n## Acceptance criteria\n- [ ] User receives clear recovery guidance\n- [ ] empty OCR output is not treated as a risk result\n- [ ] edge cases are tested.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "ocr",
+      "testing",
+      "priority-medium"
+    ],
+    "milestone": 5
+  },
+  {
+    "number": 34,
+    "title": "S4.5 \u2014 Connect OCR output to analysis pipeline",
+    "body": "## Summary\nFeed reviewed OCR text through the same analysis pipeline used for pasted text.\n\n## Acceptance criteria\n- [ ] OCR and typed text produce the same request/result contract\n- [ ] user can review text before transmission\n- [ ] failures are surfaced.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "backend",
+      "ocr",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 5
+  },
+  {
+    "number": 35,
+    "title": "S4.6 \u2014 Validate screenshot privacy and local OCR behavior",
+    "body": "## Summary\nVerify local-first screenshot handling, retention, and data flow.\n\n## Acceptance criteria\n- [ ] Data-flow review confirms when image/text leaves device\n- [ ] retention/deletion behavior is documented\n- [ ] privacy/security tests cover the path.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "ocr",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 5
+  },
+  {
+    "number": 36,
+    "title": "S5.1 \u2014 Implement Incident backend model and API",
+    "body": "## Summary\nAdd Incident persistence and core create/read/update API operations.\n\n## Acceptance criteria\n- [ ] Incident model and migrations are present\n- [ ] API validates fields\n- [ ] queries are scoped to the authenticated owner.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "database",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 6
+  },
+  {
+    "number": 37,
+    "title": "S5.2 \u2014 Implement Evidence backend model and API",
+    "body": "## Summary\nAdd Evidence metadata/storage references and related API operations.\n\n## Acceptance criteria\n- [ ] Evidence metadata is validated and linked to an incident/owner\n- [ ] access checks are enforced\n- [ ] sensitive payload handling is documented.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "database",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 6
+  },
+  {
+    "number": 38,
+    "title": "S5.3 \u2014 Implement incident ownership authorization",
+    "body": "## Summary\nEnforce user ownership for every incident and evidence read/write operation.\n\n## Acceptance criteria\n- [ ] Cross-user access is denied consistently\n- [ ] ownership checks cover list/detail/update/delete paths\n- [ ] IDOR/BOLA tests pass.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 6
+  },
+  {
+    "number": 39,
+    "title": "S5.4 \u2014 Build incident list and detail screens",
+    "body": "## Summary\nBuild Android screens for browsing incidents and viewing a selected incident.\n\n## Acceptance criteria\n- [ ] List/detail states include empty, loading, and error conditions\n- [ ] only relevant incident details are shown\n- [ ] navigation is integrated.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "ui-ux",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 6
+  },
+  {
+    "number": 40,
+    "title": "S5.5 \u2014 Implement evidence capture and metadata storage",
+    "body": "## Summary\nCapture user-selected evidence and persist required metadata with privacy-aware handling.\n\n## Acceptance criteria\n- [ ] Evidence can be linked to an incident\n- [ ] source/time/type metadata is retained as intended\n- [ ] storage and transmission are protected.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "backend",
+      "security",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 6
+  },
+  {
+    "number": 41,
+    "title": "S5.6 \u2014 Implement incident timeline",
+    "body": "## Summary\nRecord and display incident events in chronological order.\n\n## Acceptance criteria\n- [ ] Timeline events are stored with timestamps and ownership\n- [ ] Android renders ordered events\n- [ ] duplicate/out-of-order behavior is handled.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "backend",
+      "feature",
+      "priority-medium"
+    ],
+    "milestone": 6
+  },
+  {
+    "number": 42,
+    "title": "S5.7 \u2014 Test IDOR/BOLA protections",
+    "body": "## Summary\nExercise incident and evidence APIs for insecure direct object reference/broken object authorization.\n\n## Acceptance criteria\n- [ ] Cross-user identifier substitution tests are included\n- [ ] unauthorized responses disclose no protected data\n- [ ] findings are recorded.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 6
+  },
+  {
+    "number": 43,
+    "title": "S6.1 \u2014 Build incident response questionnaire",
+    "body": "## Summary\nCollect response-relevant facts about interaction, payment, OTP, credentials, APK installation, and personal information disclosure.\n\n## Acceptance criteria\n- [ ] Questions cover all specified interaction types\n- [ ] answers are understandable and skippable where appropriate\n- [ ] sensitive answers are handled privately.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "ui-ux",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 7
+  },
+  {
+    "number": 44,
+    "title": "S6.2 \u2014 Design safe incident response guidance",
+    "body": "## Summary\nCreate deterministic, safe guidance based on incident questionnaire outcomes.\n\n## Acceptance criteria\n- [ ] Guidance maps answers to clear next steps\n- [ ] advice avoids unsupported claims\n- [ ] urgent financial/credential scenarios are prioritized.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 7
+  },
+  {
+    "number": 45,
+    "title": "S6.3 \u2014 Integrate verified official response pathways",
+    "body": "## Summary\nProvide verified official reporting pathways for applicable incidents.\n\n## Acceptance criteria\n- [ ] Only official sources/procedures are linked\n- [ ] jurisdiction and applicability are clear\n- [ ] content does not invent reporting steps.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "feature",
+      "research",
+      "priority-high"
+    ],
+    "milestone": 7
+  },
+  {
+    "number": 46,
+    "title": "S6.4 \u2014 Implement Room offline persistence",
+    "body": "## Summary\nPersist incidents locally with Room for offline access.\n\n## Acceptance criteria\n- [ ] Entities/DAOs support required incident data\n- [ ] migrations are defined\n- [ ] local data access follows privacy requirements.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "database",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 7
+  },
+  {
+    "number": 47,
+    "title": "S6.5 \u2014 Implement offline-first incident behavior",
+    "body": "## Summary\nSupport local incident access and appropriate offline deterministic analysis behavior.\n\n## Acceptance criteria\n- [ ] Core incident workflow remains usable offline\n- [ ] limitations are disclosed\n- [ ] online-only actions fail gracefully.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design",
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "feature",
+      "priority-medium",
+      "risk-engine"
+    ],
+    "milestone": 7
+  },
+  {
+    "number": 48,
+    "title": "S6.6 \u2014 Implement WorkManager synchronization",
+    "body": "## Summary\nSynchronize queued local incident changes using WorkManager and backend APIs.\n\n## Acceptance criteria\n- [ ] Work is constraint-aware and retryable\n- [ ] sync status is visible\n- [ ] duplicate submissions are safely handled.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "backend",
+      "devops",
+      "feature",
+      "priority-high"
+    ],
+    "milestone": 7
+  },
+  {
+    "number": 49,
+    "title": "S6.7 \u2014 Implement synchronization retry/conflict handling",
+    "body": "## Summary\nDefine and implement retry, idempotency, and conflict behavior for synchronization.\n\n## Acceptance criteria\n- [ ] Transient failures retry safely\n- [ ] conflict rules are documented\n- [ ] tests cover duplicate and concurrent updates.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "testing",
+      "priority-medium"
+    ],
+    "milestone": 7
+  },
+  {
+    "number": 50,
+    "title": "S7.1 \u2014 Harden authentication and token handling",
+    "body": "## Summary\nReview and harden credential, access-token, and refresh-token handling.\n\n## Acceptance criteria\n- [ ] Token lifecycle and revocation/rotation expectations are documented\n- [ ] secrets are not logged\n- [ ] security tests cover misuse/expiry.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 51,
+    "title": "S7.2 \u2014 Perform authorization and IDOR/BOLA audit",
+    "body": "## Summary\nAudit authorization boundaries and object-level access controls across APIs.\n\n## Acceptance criteria\n- [ ] Protected routes and object ownership checks are enumerated\n- [ ] cross-user tests are executed\n- [ ] remediation items are documented.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 52,
+    "title": "S7.3 \u2014 Harden backend input validation",
+    "body": "## Summary\nReview backend input validation and limits across analysis, incident, and evidence endpoints.\n\n## Acceptance criteria\n- [ ] Inputs are bounded and schema-validated\n- [ ] unsafe values fail consistently\n- [ ] validation tests cover malformed and boundary cases.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "priority-high"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 53,
+    "title": "S7.4 \u2014 Perform SQL injection security testing",
+    "body": "## Summary\nTest database-backed endpoints for SQL injection risks using safe test inputs.\n\n## Acceptance criteria\n- [ ] Relevant query paths are exercised\n- [ ] findings and remediation are documented\n- [ ] parameterized query behavior is verified.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 54,
+    "title": "S7.5 \u2014 Harden evidence/file uploads",
+    "body": "## Summary\nApply safe validation, storage, and access controls to evidence uploads.\n\n## Acceptance criteria\n- [ ] File size/type/content constraints are enforced\n- [ ] uploads are isolated and owner-scoped\n- [ ] malicious-file test cases are covered.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 55,
+    "title": "S7.6 \u2014 Secure Android local storage and credentials",
+    "body": "## Summary\nProtect local records and credentials using platform-appropriate controls, including Android Keystore where appropriate.\n\n## Acceptance criteria\n- [ ] Sensitive values are not stored in plaintext\n- [ ] keys use platform protection\n- [ ] backup/logging exposure is reviewed.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "siriramya28"
+    ],
+    "labels": [
+      "android",
+      "security",
+      "priority-high"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 56,
+    "title": "S7.7 \u2014 Implement API rate limiting and abuse controls",
+    "body": "## Summary\nAdd rate limits and abuse controls to sensitive endpoints.\n\n## Acceptance criteria\n- [ ] Limits are configurable and documented\n- [ ] responses are consistent\n- [ ] legitimate clients can recover after throttling.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "security",
+      "priority-medium"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 57,
+    "title": "S7.8 \u2014 Audit logs for sensitive information",
+    "body": "## Summary\nReview application/backend logs for personal data, credentials, message contents, and evidence content.\n\n## Acceptance criteria\n- [ ] Sensitive fields are excluded or redacted\n- [ ] logging behavior is tested\n- [ ] remediation is documented.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "security",
+      "testing",
+      "priority-high"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 58,
+    "title": "S7.9 \u2014 Evaluate risk-engine false positives and false negatives",
+    "body": "## Summary\nEvaluate deterministic risk results against the safe labeled dataset and review error cases.\n\n## Acceptance criteria\n- [ ] Precision/recall or equivalent measures are reported when labels support them\n- [ ] false positives/negatives are analyzed\n- [ ] changes remain explainable.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "testing",
+      "priority-high",
+      "risk-engine"
+    ],
+    "milestone": 8
+  },
+  {
+    "number": 59,
+    "title": "S8.1 \u2014 Containerize FastAPI backend with Docker",
+    "body": "## Summary\nPackage the FastAPI backend in a reproducible Docker image.\n\n## Acceptance criteria\n- [ ] Image builds and starts using documented configuration\n- [ ] secrets are injected at runtime\n- [ ] health checks are available.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "backend",
+      "devops",
+      "priority-high"
+    ],
+    "milestone": 9
+  },
+  {
+    "number": 60,
+    "title": "S8.2 \u2014 Deploy backend with HTTPS",
+    "body": "## Summary\nDeploy the backend behind HTTPS with a documented operational configuration.\n\n## Acceptance criteria\n- [ ] Public API traffic uses valid TLS\n- [ ] deployment settings are documented\n- [ ] secrets and debug interfaces are protected.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "security",
+      "devops",
+      "priority-high"
+    ],
+    "milestone": 9
+  },
+  {
+    "number": 61,
+    "title": "S8.3 \u2014 Configure production PostgreSQL",
+    "body": "## Summary\nProvision/configure managed or production PostgreSQL for the backend.\n\n## Acceptance criteria\n- [ ] Connection security, backups, and migration procedure are documented\n- [ ] credentials remain outside source control.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "database",
+      "devops",
+      "priority-medium"
+    ],
+    "milestone": 9
+  },
+  {
+    "number": 62,
+    "title": "S8.4 \u2014 Document REST API",
+    "body": "## Summary\nPublish API usage, schemas, authentication, and error documentation.\n\n## Acceptance criteria\n- [ ] Endpoints and examples match implementation\n- [ ] auth and error behavior are explained\n- [ ] docs can be followed by Android integration.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS"
+    ],
+    "labels": [
+      "documentation",
+      "backend",
+      "priority-medium"
+    ],
+    "milestone": 9
+  },
+  {
+    "number": 63,
+    "title": "S8.5 \u2014 Create architecture documentation",
+    "body": "## Summary\nDocument end-to-end Android/backend architecture and key boundaries.\n\n## Acceptance criteria\n- [ ] Architecture diagram and responsibilities are documented\n- [ ] offline, evidence, and analysis data flows are clear.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "siriramya28"
+    ],
+    "labels": [
+      "documentation",
+      "android",
+      "backend",
+      "priority-medium"
+    ],
+    "milestone": 9
+  },
+  {
+    "number": 64,
+    "title": "S8.6 \u2014 Document threat model and security decisions",
+    "body": "## Summary\nRecord the accepted threat model and security design decisions.\n\n## Acceptance criteria\n- [ ] Assets, threats, mitigations, and residual risks are documented and linked to implementation decisions.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "documentation",
+      "security",
+      "research",
+      "priority-high"
+    ],
+    "milestone": 9
+  },
+  {
+    "number": 65,
+    "title": "S8.7 \u2014 Create testing and evaluation report",
+    "body": "## Summary\nSummarize testing and MVP evaluation, including API latency, OCR quality, sync success, crash rate, and risk precision/recall where labeled data exists.\n\n## Acceptance criteria\n- [ ] Metrics and methods are reproducible\n- [ ] dataset limitations are described\n- [ ] results and known gaps are documented.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "haneeshraj14-design"
+    ],
+    "labels": [
+      "documentation",
+      "testing",
+      "research",
+      "priority-high"
+    ],
+    "milestone": 9
+  },
+  {
+    "number": 66,
+    "title": "S8.8 \u2014 Prepare final 5\u20137 minute demonstration scenario",
+    "body": "## Summary\nPrepare a concise demonstration of Share/paste \u2192 analysis \u2192 explanation \u2192 evidence \u2192 incident \u2192 response guidance.\n\n## Acceptance criteria\n- [ ] Demo fits 5\u20137 minutes\n- [ ] each core workflow stage is shown\n- [ ] sample data is safe and synthetic.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "haneeshraj14-design",
+      "siriramya28"
+    ],
+    "labels": [
+      "documentation",
+      "feature",
+      "priority-medium"
+    ],
+    "milestone": 9
+  },
+  {
+    "number": 67,
+    "title": "S8.9 \u2014 Complete final README and project documentation",
+    "body": "## Summary\nComplete the project README and user/developer documentation for the MVP.\n\n## Acceptance criteria\n- [ ] Setup, architecture, core workflow, privacy/security, and limitations are documented\n- [ ] instructions are current and reproducible.\n\n## Scope notes\nThis issue is part of the ScamShield MVP backlog. Keep analysis deterministic and explainable, preserve privacy, and avoid definitive claims that a message is certainly a scam.",
+    "state": "open",
+    "assignees": [
+      "Mr-MarcelluS",
+      "haneeshraj14-design",
+      "siriramya28"
+    ],
+    "labels": [
+      "documentation",
+      "research",
+      "priority-medium"
+    ],
+    "milestone": 9
+  }
+]

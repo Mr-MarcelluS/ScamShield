@@ -1,0 +1,1051 @@
+{
+  "version": 1,
+  "status": "reconciled and read back on GitHub; architecture pending PR #69 review",
+  "assignees": [
+    "Mr-MarcelluS",
+    "haneeshraj14-design",
+    "siriramya28"
+  ],
+  "milestones": [
+    {
+      "number": 1,
+      "title": "M1 \u2014 Decisions and validation",
+      "description": "Accept requirements/ADRs/contracts, validate journeys and official routes. No broad feature work before #1 acceptance."
+    },
+    {
+      "number": 2,
+      "title": "M2 \u2014 Offline end-to-end text slice",
+      "description": "Build local text analysis, exposure routing and authenticated incident save/reopen. Exit: #21 demonstrated offline."
+    },
+    {
+      "number": 3,
+      "title": "M3 \u2014 Evidence and incident workflow",
+      "description": "Complete incident management, immutable evidence and reviewed export."
+    },
+    {
+      "number": 4,
+      "title": "M4 \u2014 Screenshot review and local OCR",
+      "description": "Selected images, offline OCR and correction without changing originals."
+    },
+    {
+      "number": 5,
+      "title": "M5 \u2014 Evaluated beta and handoff",
+      "description": "Held-out evaluation, device/security/accessibility gates, demo and release handoff."
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "title": "Review and accept product, architecture and privacy baseline",
+      "owner": "Mr-MarcelluS",
+      "milestone": 1,
+      "effort_days": 2,
+      "dependencies": [],
+      "scope": "Review PRD/SRS, technology alternatives, ADRs, database, contracts, threat model and release gates. Confirm team skills and weekly capacity; adjust estimates before bootstrap.",
+      "acceptance": [
+        "All three developers record review of their interfaces and responsibilities",
+        "PR is merged with cross-workstream approval; assumptions and exclusions are explicit",
+        "Any changed decision updates ADR, contract and affected backlog before feature work"
+      ],
+      "tests": "Run foundation validation and trace each SRS requirement to an owned issue. No application implementation is claimed.",
+      "labels": [
+        "documentation",
+        "research",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Validate and maintain official India response guidance",
+      "owner": "haneeshraj14-design",
+      "milestone": 1,
+      "effort_days": 2,
+      "dependencies": [],
+      "scope": "Verify bank/1930/NCRP and Chakshu routing using current official sources. Complete the live-form verification that automated access could not perform, without submitting fictional reports.",
+      "acceptance": [
+        "Record live route access date, category distinctions and sources; reconcile timing differences without inventing deadlines",
+        "Review contracts/guidance.json with another developer and record reviewer/date",
+        "Financial-loss route takes priority; no claim of automated filing or guaranteed recovery"
+      ],
+      "tests": "Check allowed destinations, stale/review-age behavior, no sensitive query parameters and correct urgent route on paid=YES.",
+      "labels": [
+        "research",
+        "security",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Validate user journeys and accessible prototype with synthetic scenarios",
+      "owner": "siriramya28",
+      "milestone": 1,
+      "effort_days": 3,
+      "dependencies": [],
+      "scope": "Create low-fidelity intake, results, exposure, incident and export flows. Test with 5\u20138 consenting adults using fictional messages; do not retain identifying data.",
+      "acceptance": [
+        "Record task completion and misunderstandings with counts and limitations",
+        "No participant interprets no-signals result as guaranteed safe; revise copy otherwise",
+        "Record team skills/access needs and unsupported-language expectations"
+      ],
+      "tests": "TalkBack/focus and 200% text review on prototype where possible; check urgent help is reachable without analysis.",
+      "labels": [
+        "ui-ux",
+        "accessibility",
+        "research",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Bootstrap pinned Android app, core and data modules",
+      "owner": "Mr-MarcelluS",
+      "milestone": 2,
+      "effort_days": 3,
+      "dependencies": [
+        1
+      ],
+      "scope": "Create Kotlin/Compose app, pure Kotlin core and Android data modules with manual injection. Pin compatible JDK/Gradle/AGP/Kotlin/dependencies and check in verified wrapper.",
+      "acceptance": [
+        "Fresh checkout builds documented debug artifact and runs core tests",
+        "Module dependencies keep core free of Android and I/O",
+        "Merged manifest has minimal permissions; no network or inbox access; toolchain documented"
+      ],
+      "tests": "Clean build, wrapper/dependency checksum verification, emulator launch and module boundary check.",
+      "labels": [
+        "android",
+        "devops",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Implement versioned domain contracts and fixture compatibility",
+      "owner": "Mr-MarcelluS",
+      "milestone": 2,
+      "effort_days": 2,
+      "dependencies": [
+        1,
+        9
+      ],
+      "scope": "Implement AnalysisInput/Result, ExposureAnswers, repository command/result and guidance identifiers from shared schemas. Define UTF-16 spans and code-point limits.",
+      "acceptance": [
+        "Kotlin fixtures match JSON v1 examples and reject unsupported versions",
+        "Errors distinguish validation, key, storage and cancellation failures without private payloads",
+        "Contract changes require ADR and both consumer owners reviewing"
+      ],
+      "tests": "Boundary lengths, enum values, missing fields, Unicode spans and serialized round trip.",
+      "labels": [
+        "android",
+        "testing",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Add Android CI, dependency checks and test foundations",
+      "owner": "haneeshraj14-design",
+      "milestone": 2,
+      "effort_days": 2,
+      "dependencies": [
+        9
+      ],
+      "scope": "Extend foundation workflow with core tests, Android lint and build; add Room/UI test harness. Pin Actions, minimal permissions, no real data artifacts.",
+      "acceptance": [
+        "Clean PR runs reproducible tests/build/lint",
+        "Document physical-device tests CI cannot prove",
+        "Record stable check names before proposing required-check settings"
+      ],
+      "tests": "Demonstrate one intentional fixture failure is caught locally, then restore passing tests; inspect artifact/log content.",
+      "labels": [
+        "devops",
+        "testing",
+        "security",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Implement share and paste intake with safe result states",
+      "owner": "siriramya28",
+      "milestone": 2,
+      "effort_days": 3,
+      "dependencies": [
+        9,
+        14
+      ],
+      "scope": "Build navigation, text preview, explicit analyze, cancellation, result/uncertainty and empty/error states. No inbox or clipboard monitoring.",
+      "acceptance": [
+        "User can paste/share up to 20k code points and review before analysis",
+        "Suspicious URLs are defanged and never navigated; original text remains available to user",
+        "Oversize/unsupported/empty input is explained; process recreation does not persist plaintext drafts"
+      ],
+      "tests": "Share intent injection, oversized/Unicode text, cancel, rotation/process death, TalkBack and large font tests.",
+      "labels": [
+        "android",
+        "ui-ux",
+        "accessibility",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Implement explainable local text indicators and coverage handling",
+      "owner": "haneeshraj14-design",
+      "milestone": 2,
+      "effort_days": 4,
+      "dependencies": [
+        14
+      ],
+      "scope": "Build deterministic bounded rules for explicit secret/APK requests, pressure plus sensitive action and advance-fee patterns. Treat negation/quoted safety advice carefully; no LLM.",
+      "acceptance": [
+        "Findings have stable IDs, spans and explanation keys with rulesVersion",
+        "NO_SIGNALS never asserts safety; unsupported content is UNASSESSED",
+        "Repeated phrases do not inflate severity; behavior matches frozen rule policy"
+      ],
+      "tests": "Unit cases for benign alerts, negations, mixed/unsupported language, adversarial repetition and 20k latency budget.",
+      "labels": [
+        "risk-engine",
+        "security",
+        "testing",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Implement bounded structural URL parsing without network access",
+      "owner": "haneeshraj14-design",
+      "milestone": 2,
+      "effort_days": 3,
+      "dependencies": [
+        14
+      ],
+      "scope": "Extract up to 20 URL candidates, preserve originals, normalize host for display and explain structural cues. Avoid live fetch, redirects, executable schemes and unvalidated domain reputation.",
+      "acceptance": [
+        "IP/userinfo/punycode/short-link cues explain limitations rather than asserting fraud",
+        "Parser enforces candidate/length bounds and maps spans to reviewed text",
+        "No DNS/HTTP requests or clickable submitted links; malformed input fails safely"
+      ],
+      "tests": "Test encoded separators, suffix deception, IPv6, ports, Unicode, punctuation and pathological regex inputs.",
+      "labels": [
+        "risk-engine",
+        "security",
+        "testing",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Demonstrate offline text-to-incident-to-response vertical slice",
+      "owner": "siriramya28",
+      "milestone": 2,
+      "effort_days": 2,
+      "dependencies": [
+        16,
+        20,
+        24,
+        36,
+        43,
+        44,
+        55
+      ],
+      "scope": "Integrate intake, local findings, exposure routing, minimal authenticated save/reopen and curated guidance. This is the first end-to-end value demonstration, before screenshot/export completion.",
+      "acceptance": [
+        "Synthetic case completes whole flow in airplane mode and reopens after restart",
+        "Urgent financial-loss help works from home without a message or saved incident",
+        "Record a reproducible demo and current limitations; no real call/report is made"
+      ],
+      "tests": "End-to-end UI test plus physical-device walkthrough; raw storage/log checks and no app-network traffic.",
+      "labels": [
+        "android",
+        "feature",
+        "testing",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Implement encrypted incident repository and migration-safe persistence",
+      "owner": "Mr-MarcelluS",
+      "milestone": 2,
+      "effort_days": 4,
+      "dependencies": [
+        14
+      ],
+      "scope": "Implement Room metadata and encrypted sensitive payloads, per-incident IDs/keys, timeline/exposure records, transactional create/update, and delete recovery. Pair with #55 before accepting real evidence.",
+      "acceptance": [
+        "Offline create/get/list/update/delete obey contracts and FK ownership",
+        "Staging/deletion recovery is idempotent under crash and storage-full conditions",
+        "Versioned migration preserves data; no destructive fallback or plaintext notes/title/message columns"
+      ],
+      "tests": "Room migration, cross-incident references, repeated create idempotency, interrupted save/delete and ciphertext inspection.",
+      "labels": [
+        "android",
+        "database",
+        "security",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 43,
+      "title": "Implement independent exposure questionnaire and urgent-help entry",
+      "owner": "siriramya28",
+      "milestone": 2,
+      "effort_days": 2,
+      "dependencies": [
+        14,
+        16
+      ],
+      "scope": "Ask clicked, secret disclosed, installed/remote access and paid with YES/NO/UNKNOWN. Do not request actual credentials. Permit urgent help without analysis.",
+      "acceptance": [
+        "Answers persist only on explicit save and can be changed with timeline event",
+        "Unknown is not coerced to no; paid=YES surfaces urgent help before evidence forms",
+        "Accessible questions use non-blaming language and work offline"
+      ],
+      "tests": "All answer states, no-content entry, back navigation, TalkBack and safe cancellation.",
+      "labels": [
+        "android",
+        "ui-ux",
+        "security",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 44,
+      "title": "Implement curated guidance catalog and exposure routing",
+      "owner": "haneeshraj14-design",
+      "milestone": 2,
+      "effort_days": 3,
+      "dependencies": [
+        2,
+        14
+      ],
+      "scope": "Load versioned reviewed guidance; deterministic routing independent of risk score. Support exact allowlisted browser destinations and user-triggered dialer via UI.",
+      "acceptance": [
+        "All 81 exposure combinations have expected action ordering",
+        "Paid=YES includes bank/1930/NCRP; stale bundle does not hide urgent basics",
+        "Source/date and local-only action progress shown; no procedure generated from message text"
+      ],
+      "tests": "Schema/destination checks, invalid bundle fallback, 90-day staleness, unknown answers and no private URL parameters.",
+      "labels": [
+        "security",
+        "feature",
+        "testing",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 55,
+      "title": "Implement and audit vault authentication, backup exclusion and deletion",
+      "owner": "Mr-MarcelluS",
+      "milestone": 2,
+      "effort_days": 4,
+      "dependencies": [
+        9,
+        14
+      ],
+      "scope": "Build device-authenticated Keystore wrapping and incident data-key envelope. Require secure device lock for durable save, lock on background timeout, test backup/D2D exclusions and lost-key handling.",
+      "acceptance": [
+        "Authenticated reads fail closed while locked and after key invalidation; no silent reset",
+        "Sensitive files/DB/cache excluded from cloud and device-transfer backups on supported OS versions",
+        "Delete-all destroys keys and removes local copies; user sees recovery/export limits"
+      ],
+      "tests": "GCM tamper/AAD swap, lock/biometric changes, backup inspection, logcanary, process death and cache cleanup. Independent security review required.",
+      "labels": [
+        "android",
+        "security",
+        "testing",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 39,
+      "title": "Build incident list, detail and local timeline management",
+      "owner": "siriramya28",
+      "milestone": 3,
+      "effort_days": 3,
+      "dependencies": [
+        36,
+        55,
+        21
+      ],
+      "scope": "Complete case navigation, edit/append event actions, archive/reopen, user-entered official references and delete confirmations. Do not imitate official case status.",
+      "acceptance": [
+        "Saved cases list/reopen offline with paginated metadata",
+        "Archive is separate from deletion; user-entered reference explicitly labeled",
+        "Timeline keeps assessment versions and distinguishes user-reported times from import times"
+      ],
+      "tests": "Empty/large lists, update/archive/delete, corrupt/key-unavailable states, accessibility and process recreation.",
+      "labels": [
+        "android",
+        "ui-ux",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 40,
+      "title": "Preserve immutable encrypted evidence with crash-safe file handling",
+      "owner": "Mr-MarcelluS",
+      "milestone": 3,
+      "effort_days": 4,
+      "dependencies": [
+        36,
+        55,
+        21
+      ],
+      "scope": "Implement validated file staging, immutable original bytes/digests, metadata, per-case limits and original/derived distinction. Use generated paths and safe ContentResolver handling.",
+      "acceptance": [
+        "Original decrypted bytes hash matches import; correction never overwrites original",
+        "10MiB/20MP, 25 items/case and 250MiB total limits fail with clear errors",
+        "Interrupted imports/deletes cannot expose plaintext or leave visible partial records"
+      ],
+      "tests": "Hostile provider, revoked URI, malformed MIME, traversal, decompression bounds, disk-full and staged-crash recovery tests.",
+      "labels": [
+        "android",
+        "security",
+        "database",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 30,
+      "title": "Implement selected screenshot import and review",
+      "owner": "siriramya28",
+      "milestone": 4,
+      "effort_days": 2,
+      "dependencies": [
+        40
+      ],
+      "scope": "Add picker/share image adapter, safe preview, MIME/magic checks and byte/pixel limits. Allow only single PNG/JPEG import; no broad gallery permission.",
+      "acceptance": [
+        "User can select, preview and cancel without durable save",
+        "Refused URI/format/oversize errors are useful and preserve existing case",
+        "Original image is passed through immutable vault path only on explicit save"
+      ],
+      "tests": "Permission/grant revocation, cancelled picker, huge image header, process death and no plaintext cache residue.",
+      "labels": [
+        "android",
+        "ocr",
+        "security",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 32,
+      "title": "Integrate bundled Latin OCR with correction and offline tests",
+      "owner": "siriramya28",
+      "milestone": 4,
+      "effort_days": 4,
+      "dependencies": [
+        30,
+        20,
+        24
+      ],
+      "scope": "Run bundled on-device ML Kit OCR on bounded decode, display editable text and mark it as derived. Route confirmed text through same analysis contract.",
+      "acceptance": [
+        "Cold-start OCR works in airplane mode with bundled model",
+        "Empty/failure/unsupported script returns correction/manual input options",
+        "Corrected text and assessment are separate from immutable original; model/license/toolchain pinned"
+      ],
+      "tests": "Clean/blurred/rotated/mixed-script test images; cancellation, p95 latency, byte-level original preservation and network/SDK behavior audit.",
+      "labels": [
+        "android",
+        "ocr",
+        "testing",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 58,
+      "title": "Evaluate risk rules on held-out synthetic and adversarial cases",
+      "owner": "haneeshraj14-design",
+      "milestone": 5,
+      "effort_days": 4,
+      "dependencies": [
+        20,
+        24,
+        32
+      ],
+      "scope": "Build development and held-out sets totaling at least 120 synthetic cases with template separation, two-person annotation and recorded limitations.",
+      "acceptance": [
+        "Report category confusion matrices, precision/recall, coverage, abstentions and uncertainty intervals",
+        "Evaluate SRS targets without tuning on holdout or mislabeling unsupported as benign",
+        "Version rules/dataset and publish failures plus allowed product claims"
+      ],
+      "tests": "Reproducible evaluation command, leakage/duplicate review, high-concern precision target 0.90 and suspicious recall target 0.80 on held-out synthetic set.",
+      "labels": [
+        "risk-engine",
+        "research",
+        "testing",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 65,
+      "title": "Run release security, accessibility and device acceptance suite",
+      "owner": "haneeshraj14-design",
+      "milestone": 5,
+      "effort_days": 4,
+      "dependencies": [
+        39,
+        40,
+        32,
+        58,
+        68,
+        15
+      ],
+      "scope": "Execute release matrix including all exposure combinations, UI/accessibility, storage migration, privacy/network, URI grants and signing/upgrade. Record actual results and remaining limitations.",
+      "acceptance": [
+        "No known critical/high defects; every SRS acceptance has evidence",
+        "Backup/D2D, key-loss, delete/export and interrupted-operation tests pass on documented devices",
+        "Reference-device latency and usability outcomes recorded with real counts, not assumed success"
+      ],
+      "tests": "Full offline journey, canary leakage checks, crash/recovery injection, TalkBack/200% text and signed artifact install/upgrade tests.",
+      "labels": [
+        "testing",
+        "security",
+        "accessibility",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 66,
+      "title": "Prepare reproducible synthetic end-to-end demonstration",
+      "owner": "siriramya28",
+      "milestone": 5,
+      "effort_days": 1,
+      "dependencies": [
+        65
+      ],
+      "scope": "Prepare 5\u20137 minute demo of review, exposure, save/reopen, screenshot/OCR, reviewed export and delete. Use only fictional messages and reserved domains.",
+      "acceptance": [
+        "Demo script and expected outputs reproducible from clean test setup",
+        "No actual call/report/submitted suspicious URL or APK execution",
+        "Known language/detection/device-recovery limitations are demonstrated or stated"
+      ],
+      "tests": "Dry run on target device within time budget; another teammate follows the script.",
+      "labels": [
+        "documentation",
+        "testing",
+        "priority-medium"
+      ]
+    },
+    {
+      "number": 67,
+      "title": "Finalize release handoff, privacy notice and distinct product identity",
+      "owner": "Mr-MarcelluS",
+      "milestone": 5,
+      "effort_days": 2,
+      "dependencies": [
+        65,
+        66
+      ],
+      "scope": "Publish accurate setup, test results, build/signing/distribution and maintenance instructions. Resolve confusion with Singapore government ScamShield before public distribution; do not rename repository without a separate decision.",
+      "acceptance": [
+        "README distinguishes implemented from planned and links current artifacts",
+        "Privacy/retention/export/recovery notice matches measured behavior",
+        "Naming and non-affiliation review resolved; release owner checks current distribution obligations and licenses"
+      ],
+      "tests": "Fresh developer setup walkthrough, link check, release certificate/checksum verification and documentation review by both teammates.",
+      "labels": [
+        "documentation",
+        "devops",
+        "priority-high"
+      ]
+    },
+    {
+      "number": 68,
+      "title": "Export selected evidence and incident summary with consent",
+      "owner": "Mr-MarcelluS",
+      "milestone": 3,
+      "effort_days": 4,
+      "dependencies": [
+        39,
+        40
+      ],
+      "scope": "Create one-way evidence export with text summary and versioned JSON manifest, selection/redaction preview and optional original files. Export crosses the app trust boundary and is not a backup/restore feature.",
+      "acceptance": [
+        "Preview shows exact included originals/derivatives; default summary contains no unintended private fields",
+        "Manifest identifies selected files, original/derived status, byte counts and SHA-256 without keys/internal paths",
+        "Temporary FileProvider grants/caches expire after 15 minutes and startup cleanup; user warned recipient copies cannot be recalled"
+      ],
+      "tests": "Subset/redaction tests, byte digest verification, hostile filenames, recipient access scope, expiry/cancel/restart cleanup and archive manifest schema check.",
+      "labels": [
+        "android",
+        "security",
+        "feature",
+        "priority-high"
+      ]
+    }
+  ],
+  "reconciliation": [
+    {
+      "number": 1,
+      "original_title": "S0.1 \u2014 Finalize ScamShield MVP scope",
+      "action": "edit",
+      "successor": 1,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 2,
+      "original_title": "S0.2 \u2014 Research official cyber-fraud reporting pathways",
+      "action": "edit",
+      "successor": 2,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 3,
+      "original_title": "S0.3 \u2014 Define ScamShield user journey",
+      "action": "edit",
+      "successor": 3,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 4,
+      "original_title": "S0.4 \u2014 Define ScamShield system architecture",
+      "action": "supersede",
+      "successor": 1,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 5,
+      "original_title": "S0.5 \u2014 Design ScamShield database schema",
+      "action": "supersede",
+      "successor": 36,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 6,
+      "original_title": "S0.6 \u2014 Define ScamShield REST API contract",
+      "action": "supersede",
+      "successor": 14,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 7,
+      "original_title": "S0.7 \u2014 Design deterministic risk engine",
+      "action": "supersede",
+      "successor": 20,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 8,
+      "original_title": "S0.8 \u2014 Create ScamShield threat model",
+      "action": "supersede",
+      "successor": 55,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 9,
+      "original_title": "S1.1 \u2014 Initialize Android project architecture",
+      "action": "edit",
+      "successor": 9,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 10,
+      "original_title": "S1.2 \u2014 Implement Compose navigation and MVVM foundation",
+      "action": "supersede",
+      "successor": 16,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 11,
+      "original_title": "S1.3 \u2014 Initialize FastAPI backend",
+      "action": "defer",
+      "successor": 1,
+      "reason": "No remote computation is required; backend is deferred by ADR-001."
+    },
+    {
+      "number": 12,
+      "original_title": "S1.4 \u2014 Configure PostgreSQL SQLAlchemy and Alembic",
+      "action": "defer",
+      "successor": 1,
+      "reason": "Server database is deferred; Room persistence is owned by #36."
+    },
+    {
+      "number": 13,
+      "original_title": "S1.5 \u2014 Implement authentication foundation",
+      "action": "defer",
+      "successor": 1,
+      "reason": "Server accounts/tokens are excluded; local vault authentication is owned by #55."
+    },
+    {
+      "number": 14,
+      "original_title": "S1.6 \u2014 Implement risk indicator/risk band data structures",
+      "action": "edit",
+      "successor": 14,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 15,
+      "original_title": "S1.7 \u2014 Establish automated testing foundation",
+      "action": "edit",
+      "successor": 15,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 16,
+      "original_title": "S2.1 \u2014 Build Android text analysis screen",
+      "action": "edit",
+      "successor": 16,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 17,
+      "original_title": "S2.2 \u2014 Integrate Retrofit with analysis API",
+      "action": "supersede",
+      "successor": 21,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 18,
+      "original_title": "S2.3 \u2014 Implement POST /api/v1/analysis/text",
+      "action": "supersede",
+      "successor": 20,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 19,
+      "original_title": "S2.4 \u2014 Implement analysis request validation and response schema",
+      "action": "supersede",
+      "successor": 14,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 20,
+      "original_title": "S2.5 \u2014 Implement initial scam indicators",
+      "action": "edit",
+      "successor": 20,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 21,
+      "original_title": "S2.6 \u2014 Integrate end-to-end text analysis vertical slice",
+      "action": "edit",
+      "successor": 21,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 22,
+      "original_title": "S2.7 \u2014 Implement analysis loading error and uncertainty states",
+      "action": "supersede",
+      "successor": 16,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 23,
+      "original_title": "S3.1 \u2014 Implement suspicious entity extraction",
+      "action": "supersede",
+      "successor": 20,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 24,
+      "original_title": "S3.2 \u2014 Implement URL detection and normalization",
+      "action": "edit",
+      "successor": 24,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 25,
+      "original_title": "S3.3 \u2014 Implement structural URL risk analysis",
+      "action": "supersede",
+      "successor": 24,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 26,
+      "original_title": "S3.4 \u2014 Implement basic typosquatting detection",
+      "action": "defer",
+      "successor": 1,
+      "reason": "Domain-similarity scoring needs a maintained allowlist and false-positive evaluation; structural parsing remains in #24."
+    },
+    {
+      "number": 27,
+      "original_title": "S3.5 \u2014 Expand explainable risk scoring",
+      "action": "supersede",
+      "successor": 20,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 28,
+      "original_title": "S3.6 \u2014 Build synthetic risk-engine evaluation dataset",
+      "action": "supersede",
+      "successor": 58,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 29,
+      "original_title": "S3.7 \u2014 Build automated risk-engine test suite",
+      "action": "supersede",
+      "successor": 58,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 30,
+      "original_title": "S4.1 \u2014 Implement Android screenshot/image picker",
+      "action": "edit",
+      "successor": 30,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 31,
+      "original_title": "S4.2 \u2014 Implement screenshot preview and review",
+      "action": "supersede",
+      "successor": 30,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 32,
+      "original_title": "S4.3 \u2014 Integrate on-device ML Kit OCR",
+      "action": "edit",
+      "successor": 32,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 33,
+      "original_title": "S4.4 \u2014 Handle OCR failure and empty-text cases",
+      "action": "supersede",
+      "successor": 32,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 34,
+      "original_title": "S4.5 \u2014 Connect OCR output to analysis pipeline",
+      "action": "supersede",
+      "successor": 32,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 35,
+      "original_title": "S4.6 \u2014 Validate screenshot privacy and local OCR behavior",
+      "action": "supersede",
+      "successor": 32,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 36,
+      "original_title": "S5.1 \u2014 Implement Incident backend model and API",
+      "action": "edit",
+      "successor": 36,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 37,
+      "original_title": "S5.2 \u2014 Implement Evidence backend model and API",
+      "action": "supersede",
+      "successor": 40,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 38,
+      "original_title": "S5.3 \u2014 Implement incident ownership authorization",
+      "action": "supersede",
+      "successor": 36,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 39,
+      "original_title": "S5.4 \u2014 Build incident list and detail screens",
+      "action": "edit",
+      "successor": 39,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 40,
+      "original_title": "S5.5 \u2014 Implement evidence capture and metadata storage",
+      "action": "edit",
+      "successor": 40,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 41,
+      "original_title": "S5.6 \u2014 Implement incident timeline",
+      "action": "supersede",
+      "successor": 39,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 42,
+      "original_title": "S5.7 \u2014 Test IDOR/BOLA protections",
+      "action": "supersede",
+      "successor": 55,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 43,
+      "original_title": "S6.1 \u2014 Build incident response questionnaire",
+      "action": "edit",
+      "successor": 43,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 44,
+      "original_title": "S6.2 \u2014 Design safe incident response guidance",
+      "action": "edit",
+      "successor": 44,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 45,
+      "original_title": "S6.3 \u2014 Integrate verified official response pathways",
+      "action": "supersede",
+      "successor": 44,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 46,
+      "original_title": "S6.4 \u2014 Implement Room offline persistence",
+      "action": "supersede",
+      "successor": 36,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 47,
+      "original_title": "S6.5 \u2014 Implement offline-first incident behavior",
+      "action": "supersede",
+      "successor": 21,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 48,
+      "original_title": "S6.6 \u2014 Implement WorkManager synchronization",
+      "action": "defer",
+      "successor": 1,
+      "reason": "No cloud replicas exist in MVP; background sync would add unnecessary data transmission."
+    },
+    {
+      "number": 49,
+      "original_title": "S6.7 \u2014 Implement synchronization retry/conflict handling",
+      "action": "defer",
+      "successor": 1,
+      "reason": "No cloud sync or distributed conflicts exist; local operation recovery belongs to #36."
+    },
+    {
+      "number": 50,
+      "original_title": "S7.1 \u2014 Harden authentication and token handling",
+      "action": "supersede",
+      "successor": 55,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 51,
+      "original_title": "S7.2 \u2014 Perform authorization and IDOR/BOLA audit",
+      "action": "supersede",
+      "successor": 55,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 52,
+      "original_title": "S7.3 \u2014 Harden backend input validation",
+      "action": "supersede",
+      "successor": 14,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 53,
+      "original_title": "S7.4 \u2014 Perform SQL injection security testing",
+      "action": "supersede",
+      "successor": 36,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 54,
+      "original_title": "S7.5 \u2014 Harden evidence/file uploads",
+      "action": "supersede",
+      "successor": 40,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 55,
+      "original_title": "S7.6 \u2014 Secure Android local storage and credentials",
+      "action": "edit",
+      "successor": 55,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 56,
+      "original_title": "S7.7 \u2014 Implement API rate limiting and abuse controls",
+      "action": "defer",
+      "successor": 1,
+      "reason": "No public API exists to rate-limit; bounded local input belongs to #14 and #24."
+    },
+    {
+      "number": 57,
+      "original_title": "S7.8 \u2014 Audit logs for sensitive information",
+      "action": "supersede",
+      "successor": 65,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 58,
+      "original_title": "S7.9 \u2014 Evaluate risk-engine false positives and false negatives",
+      "action": "edit",
+      "successor": 58,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 59,
+      "original_title": "S8.1 \u2014 Containerize FastAPI backend with Docker",
+      "action": "defer",
+      "successor": 1,
+      "reason": "No backend runtime is selected, so containerization has no MVP deployable."
+    },
+    {
+      "number": 60,
+      "original_title": "S8.2 \u2014 Deploy backend with HTTPS",
+      "action": "defer",
+      "successor": 1,
+      "reason": "No backend runtime is selected; signed Android distribution belongs to #65/#67."
+    },
+    {
+      "number": 61,
+      "original_title": "S8.3 \u2014 Configure production PostgreSQL",
+      "action": "defer",
+      "successor": 1,
+      "reason": "No PostgreSQL server is selected; local migrations belong to #36."
+    },
+    {
+      "number": 62,
+      "original_title": "S8.4 \u2014 Document REST API",
+      "action": "supersede",
+      "successor": 14,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 63,
+      "original_title": "S8.5 \u2014 Create architecture documentation",
+      "action": "supersede",
+      "successor": 1,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 64,
+      "original_title": "S8.6 \u2014 Document threat model and security decisions",
+      "action": "supersede",
+      "successor": 55,
+      "reason": "Consolidate overlapping work into a complete verifiable local-first deliverable; not marked implemented."
+    },
+    {
+      "number": 65,
+      "original_title": "S8.7 \u2014 Create testing and evaluation report",
+      "action": "edit",
+      "successor": 65,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 66,
+      "original_title": "S8.8 \u2014 Prepare final 5\u20137 minute demonstration scenario",
+      "action": "edit",
+      "successor": 66,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    },
+    {
+      "number": 67,
+      "original_title": "S8.9 \u2014 Complete final README and project documentation",
+      "action": "edit",
+      "successor": 67,
+      "reason": "Retain issue reference; revise to local-first deliverable with owner, dependencies and testable acceptance."
+    }
+  ]
+}

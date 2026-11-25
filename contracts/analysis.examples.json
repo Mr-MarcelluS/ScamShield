@@ -1,0 +1,40 @@
+[
+  {
+    "schemaVersion": 1,
+    "rulesVersion": "draft-1",
+    "band": "HIGH_CONCERN",
+    "coverage": "SUPPORTED",
+    "indicators": [
+      {
+        "id": "request.secret",
+        "category": "SECRET_REQUEST",
+        "startUtf16": 0,
+        "endUtf16": 14,
+        "explanationKey": "explicit_secret_request"
+      }
+    ],
+    "limitations": [
+      "A text assessment cannot establish sender identity."
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "rulesVersion": "draft-1",
+    "band": "NO_SIGNALS",
+    "coverage": "SUPPORTED",
+    "indicators": [],
+    "limitations": [
+      "No supported warning signs found. This does not confirm safety."
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "rulesVersion": "draft-1",
+    "band": "UNASSESSED",
+    "coverage": "UNSUPPORTED",
+    "indicators": [],
+    "limitations": [
+      "This language is not covered by the current rules."
+    ]
+  }
+]
