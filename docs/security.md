@@ -38,7 +38,7 @@ Temporary export is intentionally readable to the selected recipient; this is th
 - Draft text/image: memory/private temporary decode only; discard on cancel, completion without save, background eviction and process restart. Never auto-save pasted content.
 - Saved case: retained locally until user deletes; show storage use and offer review/removal, with no automatic evidence purge. Warn before saving actual secrets; app never requests them as structured fields.
 - Limits: 20k text code points; 10MiB/20MP per image; 25 evidence items per incident and 250MiB total encrypted evidence budget initially. Reject gracefully and offer export/delete; never remove another case to make room.
-- Delete: tombstone → revoke/remove wrapped incident key → remove dependent rows/files/temp exports. Retry interrupted cleanup. “Delete all” destroys vault keys then removes local data. Flash wear leveling means no claim of forensic secure erase; already exported copies remain with recipients.
+- Delete: tombstone → revoke/remove wrapped incident key → remove dependent rows/files/temp exports. Retry interrupted cleanup. “Delete all” destroys vault keys then removes local data. Flash wear leveling means no claim of forensic secure erase; already exported copies remain with recipients. Deleting an incident does not remove the source screenshot from its original app or gallery.
 - No developer server or telemetry retention. Source repository/test artifacts use synthetic content only. User diagnostics are an explicit minimal structured report with no private text/images.
 
 ## Future network gate

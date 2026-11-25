@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-11-25T07:03:42.616566+00:00",
+  "repository": "Mr-MarcelluS/ScamShield",
+  "pull_request": 69,
+  "issue_count": 68,
+  "open_issues": 23,
+  "closed_not_planned": 45,
+  "active_milestones": 5,
+  "retired_empty_milestones": 4,
+  "assignees_verified": [
+    "Mr-MarcelluS",
+    "haneeshraj14-design",
+    "siriramya28"
+  ],
+  "checked_fields": [
+    "title",
+    "body acceptance/tests/dependencies",
+    "state",
+    "state_reason",
+    "assignees",
+    "labels",
+    "milestone"
+  ],
+  "visibility": "public unchanged",
+  "branch_rules": "unchanged",
+  "project_board": "blocked: integration lacks Projects access",
+  "application_implemented": false,
+  "milestone_counter_discrepancy": "Aggregate totals still reflect original backlog; direct issue-level assignments and empty retired-milestone queries verified.",
+  "active_issue_counts_by_milestone": {
+    "1": 3,
+    "2": 11,
+    "3": 3,
+    "4": 2,
+    "5": 4
+  }
+}

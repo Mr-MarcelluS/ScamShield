@@ -96,6 +96,23 @@
       "destinations": [],
       "sources": [],
       "editorialNote": "Product question, not an official reporting procedure."
+    },
+    {
+      "id": "other_cybercrime",
+      "trigger": "always",
+      "priority": 4,
+      "title": "Find official cybercrime reporting",
+      "steps": [
+        "For cybercrime concerns beyond suspected communication, use the National Cyber Crime Reporting Portal.",
+        "Follow the current official category instructions. This app does not submit a complaint for you."
+      ],
+      "destinations": [
+        "https://cybercrime.gov.in/"
+      ],
+      "sources": [
+        "https://cybercrime.gov.in/webform/FAQ.aspx"
+      ],
+      "editorialNote": "Portal purpose supported by official sources; current live form must be verified in #2."
     }
   ]
 }

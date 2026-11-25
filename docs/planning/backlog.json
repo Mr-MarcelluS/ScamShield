@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "status": "prepared; remote execution recorded separately",
+  "status": "reconciled and read back on GitHub; architecture pending PR #69 review",
   "assignees": [
     "Mr-MarcelluS",
     "haneeshraj14-design",

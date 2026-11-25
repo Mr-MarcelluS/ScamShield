@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    {
+      "if": {
+        "properties": {
+          "band": {
+            "enum": [
+              "HIGH_CONCERN",
+              "CAUTION"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "indicators": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "coverage": {
+            "const": "UNSUPPORTED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "indicators": {
+            "maxItems": 0
+          }
+        }
+      }
     }
   ]
 }

@@ -58,7 +58,9 @@ def main():
     assert not analysis.is_valid(bad), 'Unknown contract version accepted'
     Draft202012Validator(export_schema, format_checker=FormatChecker()).validate(read('contracts/export.example.json'))
     guidance = read('contracts/guidance.json')
-    assert guidance['status'].startswith('draft-')
+    guidance_schema = read('contracts/guidance.schema.json')
+    Draft202012Validator.check_schema(guidance_schema)
+    Draft202012Validator(guidance_schema, format_checker=FormatChecker()).validate(guidance)
     allowed = {'tel:1930', 'https://cybercrime.gov.in/', 'https://sancharsaathi.gov.in/'}
     ids = [a['id'] for a in guidance['actions']]
     assert len(ids) == len(set(ids))
