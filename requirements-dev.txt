@@ -1,0 +1,2 @@
+# Foundation contract validation only; no application runtime dependency.
+jsonschema==4.23.0

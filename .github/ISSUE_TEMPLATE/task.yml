@@ -1,0 +1,28 @@
+name: Verifiable development task
+description: A bounded deliverable with owner, dependencies and acceptance
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and objective
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Technical scope and exclusions
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Verifiable acceptance criteria and testing
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies, owner, reviewer and milestone
+      description: Link contracts and issues. Set assignee, milestone and labels before Ready.
+    validations:
+      required: true

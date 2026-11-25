@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:scamshield:export:v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "incidentId",
+    "exportedAt",
+    "warning",
+    "assessmentVersions",
+    "evidence"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "incidentId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "exportedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "warning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assessmentVersions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "maxItems": 25,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "filename",
+          "sha256",
+          "mime",
+          "bytes",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "filename": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+[.](png|jpg|txt)$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "mime": {
+            "enum": [
+              "image/png",
+              "image/jpeg",
+              "text/plain"
+            ]
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10485760
+          },
+          "kind": {
+            "enum": [
+              "original",
+              "derived"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

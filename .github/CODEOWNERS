@@ -1,0 +1,7 @@
+# Review routing, not exclusive ownership. Existing rules do not require code-owner approval.
+/docs/architecture/ @Mr-MarcelluS @haneeshraj14-design
+/contracts/ @Mr-MarcelluS @haneeshraj14-design @siriramya28
+/docs/security.md @haneeshraj14-design @Mr-MarcelluS
+/docs/product.md @siriramya28 @haneeshraj14-design
+/docs/research.md @haneeshraj14-design
+/.github/ @Mr-MarcelluS @haneeshraj14-design

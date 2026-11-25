@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "incidentId": "a8e4401f-d8f2-4b24-855f-f88ae458b8ef",
+  "exportedAt": "2026-11-25T00:00:00Z",
+  "warning": "Times and provenance are app or user recorded; this manifest does not prove authenticity.",
+  "assessmentVersions": [
+    "draft-1"
+  ],
+  "evidence": []
+}
